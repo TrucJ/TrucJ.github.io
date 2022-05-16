@@ -2,26 +2,15 @@ baseurl = "https://example.com"
 languageCode = "en-us"
 theme = "hugo-theme-stack"
 paginate = 5
-title = "Example Site"
+title = "TrucJ"
 disqusShortname = "hugo-theme-stack"
 DefaultContentLanguage = "en"
 hasCJKLanguage = false
 
 [languages.en]
 languageName = "English"
-title = "Example Site"
+title = "TrucJ"
 weight = 1
-
-[languages.zh-cn]
-languageName = "中文"
-title = "演示站点"
-weight = 2
-
-[languages.ar]
-languageName = "عربي"
-languagedirection = "rtl"
-title = "موقع تجريبي"
-weight = 3
 
 [permalinks]
 post = "/p/:slug/"
@@ -41,12 +30,12 @@ rssFullContent = true
 
   [params.sidebar]
   emoji = "🍥"
-  subtitle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  subtitle = "My fullname is Huynh Ngo Trung Truc"
 
     [params.sidebar.avatar]
     enabled = true
     local = true
-    src = "img/avatar.png"
+    src = "img/avatar.jpg"
 
   [params.article]
   math = false
@@ -140,18 +129,10 @@ main = [ ]
   [[menu.social]]
   identifier = "github"
   name = "GitHub"
-  url = "https://github.com/CaiJimmy/hugo-theme-stack"
+  url = "https://github.com/TrucJ"
 
     [menu.social.params]
     icon = "brand-github"
-
-  [[menu.social]]
-  identifier = "twitter"
-  name = "Twitter"
-  url = "https://twitter.com"
-
-    [menu.social.params]
-    icon = "brand-twitter"
 
 [related]
 includeNewer = true
