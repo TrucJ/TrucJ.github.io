@@ -1,4 +1,4 @@
-baseurl = "https://example.com"
+baseurl = "https://trucj.github.io"
 languageCode = "en-us"
 theme = "hugo-theme-stack"
 paginate = 5
@@ -6,6 +6,7 @@ title = "TrucJ"
 disqusShortname = "hugo-theme-stack"
 DefaultContentLanguage = "en"
 hasCJKLanguage = false
+publishDir = "docs"
 
 [languages.en]
 languageName = "English"
