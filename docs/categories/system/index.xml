@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>System on TrucJ</title>
-        <link>https://trucj.github.io/categories/system/</link>
+        <link>https://TrucJ.github.io/categories/system/</link>
         <description>Recent content in System on TrucJ</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 16 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://trucj.github.io/categories/system/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 16 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://TrucJ.github.io/categories/system/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Large-scale System Design</title>
-        <link>https://trucj.github.io/p/large-scale-system-design/</link>
+        <link>https://TrucJ.github.io/p/large-scale-system-design/</link>
         <pubDate>Mon, 16 May 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://trucj.github.io/p/large-scale-system-design/</guid>
-        <description>&lt;img src="https://trucj.github.io/p/large-scale-system-design/pawel-czerwinski-8uZPynIu-rQ-unsplash.jpg" alt="Featured image of post Large-scale System Design" /&gt;&lt;p&gt;Instead of talking about how to build a particular system, I am going to give a general introduction to how to build a large scale system.&lt;/p&gt;
+        <guid>https://TrucJ.github.io/p/large-scale-system-design/</guid>
+        <description>&lt;img src="https://TrucJ.github.io/p/large-scale-system-design/pawel-czerwinski-8uZPynIu-rQ-unsplash.jpg" alt="Featured image of post Large-scale System Design" /&gt;&lt;p&gt;Instead of talking about how to build a particular system, I am going to give a general introduction to how to build a large scale system.&lt;/p&gt;
 &lt;h1 id=&#34;general-methods&#34;&gt;General methods&lt;/h1&gt;
 &lt;p&gt;Handling a large number of requests in one system is like serving multiple customers in a store or an airport. If you have a store and a constant flow of customers, you need to find a way to please everyone. There are two simple general methods to do that.&lt;/p&gt;
 &lt;h2 id=&#34;method-1-increase-queue-size&#34;&gt;Method 1. Increase queue size&lt;/h2&gt;
 &lt;p&gt;The first method is to increase the size of the queue.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://trucj.github.io/p/large-scale-system-design/long_queue_airport.jpeg&#34;
+&lt;p&gt;&lt;img src=&#34;https://TrucJ.github.io/p/large-scale-system-design/long_queue_airport.jpeg&#34;
 	width=&#34;660&#34;
 	height=&#34;439&#34;
-	srcset=&#34;https://trucj.github.io/p/large-scale-system-design/long_queue_airport_hu0fde27eec8d3a2dbbb145ac918eba2fc_54992_480x0_resize_q75_box.jpeg 480w, https://trucj.github.io/p/large-scale-system-design/long_queue_airport_hu0fde27eec8d3a2dbbb145ac918eba2fc_54992_1024x0_resize_q75_box.jpeg 1024w&#34;
+	srcset=&#34;https://TrucJ.github.io/p/large-scale-system-design/long_queue_airport_hu0fde27eec8d3a2dbbb145ac918eba2fc_54992_480x0_resize_q75_box.jpeg 480w, https://TrucJ.github.io/p/large-scale-system-design/long_queue_airport_hu0fde27eec8d3a2dbbb145ac918eba2fc_54992_1024x0_resize_q75_box.jpeg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Long queue airport&#34;
@@ -52,10 +52,10 @@ Just like serving customers in stores, if the number of waiters/waitresses incre
 &lt;p&gt;When building a large system, we can divide the system into a number of subsystems that specialize in certain tasks. When a subsystem is specialized, we can use techniques to make that subsystem run better and faster.&lt;br&gt;
 Moreover, when we divide the large system into subsystems, we will work better in the latter case. If there are requests that can be handled without including the jobs of all subsystems, those requests will not have to wait too long to be processed and responded to.&lt;br&gt;
 A real-life example is when you go to cinemas like CGV, you will find that there are separate ticket handle and popcorn stalls. Then, customers who only want to buy popcorn will not have to wait for the system to serve those who buy tickets in advance.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://trucj.github.io/p/large-scale-system-design/cgv.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://TrucJ.github.io/p/large-scale-system-design/cgv.png&#34;
 	width=&#34;980&#34;
 	height=&#34;415&#34;
-	srcset=&#34;https://trucj.github.io/p/large-scale-system-design/cgv_huf24690a920d9a2dcb5195a497769f823_679852_480x0_resize_box_2.png 480w, https://trucj.github.io/p/large-scale-system-design/cgv_huf24690a920d9a2dcb5195a497769f823_679852_1024x0_resize_box_2.png 1024w&#34;
+	srcset=&#34;https://TrucJ.github.io/p/large-scale-system-design/cgv_huf24690a920d9a2dcb5195a497769f823_679852_480x0_resize_box_2.png 480w, https://TrucJ.github.io/p/large-scale-system-design/cgv_huf24690a920d9a2dcb5195a497769f823_679852_1024x0_resize_box_2.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	

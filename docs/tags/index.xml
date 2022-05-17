@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Tags on TrucJ</title>
-        <link>https://trucj.github.io/tags/</link>
+        <link>https://TrucJ.github.io/tags/</link>
         <description>Recent content in Tags on TrucJ</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 16 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://trucj.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 16 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://TrucJ.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>beginner</title>
-        <link>https://trucj.github.io/tags/beginner/</link>
+        <link>https://TrucJ.github.io/tags/beginner/</link>
         <pubDate>Mon, 16 May 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://trucj.github.io/tags/beginner/</guid>
+        <guid>https://TrucJ.github.io/tags/beginner/</guid>
         <description></description>
         </item>
         <item>
         <title>large-scale system</title>
-        <link>https://trucj.github.io/tags/large-scale-system/</link>
+        <link>https://TrucJ.github.io/tags/large-scale-system/</link>
         <pubDate>Mon, 16 May 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://trucj.github.io/tags/large-scale-system/</guid>
+        <guid>https://TrucJ.github.io/tags/large-scale-system/</guid>
         <description></description>
         </item>
         <item>
         <title>system design</title>
-        <link>https://trucj.github.io/tags/system-design/</link>
+        <link>https://TrucJ.github.io/tags/system-design/</link>
         <pubDate>Mon, 16 May 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://trucj.github.io/tags/system-design/</guid>
+        <guid>https://TrucJ.github.io/tags/system-design/</guid>
         <description></description>
         </item>
         
