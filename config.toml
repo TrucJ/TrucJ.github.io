@@ -31,7 +31,7 @@ rssFullContent = true
 
   [params.sidebar]
   emoji = "🇻🇳"
-  subtitle = "My name is Trung Truc. I am a fresher in Zalopay."
+  subtitle = "I'm Trung Truc, formerly a student at HCMUS, and currently, I work at ZaloPay."
 
     [params.sidebar.avatar]
     enabled = true
