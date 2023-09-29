@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>large-scale system on TrucJ</title>
-    <link>https://TrucJ.github.io/tags/large-scale-system/</link>
-    <description>Recent content in large-scale system on TrucJ</description>
+    <title>Golang on TrucJ</title>
+    <link>https://TrucJ.github.io/categories/golang/</link>
+    <description>Recent content in Golang on TrucJ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 16 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://TrucJ.github.io/tags/large-scale-system/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://TrucJ.github.io/categories/golang/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Large-scale System Design</title>
       <link>https://TrucJ.github.io/p/large-scale-system-design/</link>

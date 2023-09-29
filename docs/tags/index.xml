@@ -1,35 +1,56 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>Tags on TrucJ</title>
-        <link>https://TrucJ.github.io/tags/</link>
-        <description>Recent content in Tags on TrucJ</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language>
-        <lastBuildDate>Mon, 16 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://TrucJ.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>beginner</title>
-        <link>https://TrucJ.github.io/tags/beginner/</link>
-        <pubDate>Mon, 16 May 2022 00:00:00 +0000</pubDate>
-        
-        <guid>https://TrucJ.github.io/tags/beginner/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>large-scale system</title>
-        <link>https://TrucJ.github.io/tags/large-scale-system/</link>
-        <pubDate>Mon, 16 May 2022 00:00:00 +0000</pubDate>
-        
-        <guid>https://TrucJ.github.io/tags/large-scale-system/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>system design</title>
-        <link>https://TrucJ.github.io/tags/system-design/</link>
-        <pubDate>Mon, 16 May 2022 00:00:00 +0000</pubDate>
-        
-        <guid>https://TrucJ.github.io/tags/system-design/</guid>
-        <description></description>
-        </item>
-        
-    </channel>
+  <channel>
+    <title>Tags on TrucJ</title>
+    <link>https://TrucJ.github.io/tags/</link>
+    <description>Recent content in Tags on TrucJ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 16 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://TrucJ.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>beginner</title>
+      <link>https://TrucJ.github.io/tags/beginner/</link>
+      <pubDate>Mon, 16 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://TrucJ.github.io/tags/beginner/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>design pattern</title>
+      <link>https://TrucJ.github.io/tags/design-pattern/</link>
+      <pubDate>Mon, 16 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://TrucJ.github.io/tags/design-pattern/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Golang</title>
+      <link>https://TrucJ.github.io/tags/golang/</link>
+      <pubDate>Mon, 16 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://TrucJ.github.io/tags/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>large-scale system</title>
+      <link>https://TrucJ.github.io/tags/large-scale-system/</link>
+      <pubDate>Mon, 16 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://TrucJ.github.io/tags/large-scale-system/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>system design</title>
+      <link>https://TrucJ.github.io/tags/system-design/</link>
+      <pubDate>Mon, 16 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://TrucJ.github.io/tags/system-design/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
 </rss>

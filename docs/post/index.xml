@@ -1,107 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>Posts on TrucJ</title>
-        <link>https://TrucJ.github.io/post/</link>
-        <description>Recent content in Posts on TrucJ</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language>
-        <lastBuildDate>Mon, 16 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://TrucJ.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Large-scale System Design</title>
-        <link>https://TrucJ.github.io/p/large-scale-system-design/</link>
-        <pubDate>Mon, 16 May 2022 00:00:00 +0000</pubDate>
-        
-        <guid>https://TrucJ.github.io/p/large-scale-system-design/</guid>
-        <description>&lt;img src="https://TrucJ.github.io/p/large-scale-system-design/banner.png" alt="Featured image of post Large-scale System Design" /&gt;&lt;p&gt;Since I am a newbie and do not have too much expertise, I will share in the easiest way to understand this topic.&lt;/p&gt;
-&lt;p&gt;Instead of talking about how to build a particular system, I am going to give a general introduction to how to build a large scale system.&lt;/p&gt;
-&lt;h1 id=&#34;general-methods&#34;&gt;General methods&lt;/h1&gt;
-&lt;p&gt;Handling a large number of requests in one system is like serving multiple customers in a store or an airport. If you have a store and a constant flow of customers, you need to find a way to please everyone. There are two simple general methods to do that.&lt;/p&gt;
-&lt;h2 id=&#34;method-1-increase-queue-size&#34;&gt;Method 1. Increase queue size&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;The first method is to increase the size of the queue.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://TrucJ.github.io/p/large-scale-system-design/long_queue_airport.jpeg&#34;
-	width=&#34;660&#34;
-	height=&#34;439&#34;
-	srcset=&#34;https://TrucJ.github.io/p/large-scale-system-design/long_queue_airport_hu0fde27eec8d3a2dbbb145ac918eba2fc_54992_480x0_resize_q75_box.jpeg 480w, https://TrucJ.github.io/p/large-scale-system-design/long_queue_airport_hu0fde27eec8d3a2dbbb145ac918eba2fc_54992_1024x0_resize_q75_box.jpeg 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;Long queue in airport&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;150&#34;
-		data-flex-basis=&#34;360px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;Airports or public restaurants often design long queues to accommodate many customers. When customers are queued up, they get the feeling that they will soon be served and will be satisfied with the store.&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Similar to our system, when queued, users will be notified to let them know that their request is about to be processed. This will make the user happy.&lt;/p&gt;
-&lt;h3 id=&#34;advantage&#34;&gt;Advantage&lt;/h3&gt;
-&lt;p&gt;The advantage of this method is that it does not cost too much to implement and maintain the system.&lt;/p&gt;
-&lt;h3 id=&#34;disadvantage&#34;&gt;Disadvantage&lt;/h3&gt;
-&lt;p&gt;The disadvantage of this method appears when there are too many requests in a queue, then the waiting time to be processed will take a long time and will bring a bad experience to the user.&lt;/p&gt;
-&lt;h2 id=&#34;method-2-increase-the-number-of-processing-threads&#34;&gt;Method 2. Increase the number of processing threads&lt;/h2&gt;
-&lt;p&gt;We see that the above method is not good performance when the number of users exceeds the allowed threshold. Therefore, &lt;strong&gt;increasing the number of processing threads is the method used in combination&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;If method 1 only gives the user the feeling that the request is being processed, then this method will help the user get processed really quickly.&lt;/p&gt;
-&lt;p&gt;When many threads work at the same time, the processing time of the whole system will be much faster, which is called parallel processing. More specifically, if the number of threads is doubled, the user&amp;rsquo;s waiting time will be halved.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;Just like serving customers in stores, if the number of waiters/waitresses increases, customers will feel more satisfied because they are served faster.&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;advantage-1&#34;&gt;Advantage&lt;/h3&gt;
-&lt;p&gt;The advantage of this method is that it greatly improves performance.&lt;/p&gt;
-&lt;h3 id=&#34;disadvantage-1&#34;&gt;Disadvantage&lt;/h3&gt;
-&lt;p&gt;The disadvantage of this method is that it is expensive to implement and maintain the system.&lt;/p&gt;
-&lt;h1 id=&#34;specific-methods&#34;&gt;Specific methods&lt;/h1&gt;
-&lt;p&gt;In addition to the general methods, there are a number of methods that can be applied in specific cases.&lt;/p&gt;
-&lt;h2 id=&#34;flexible-number-of-threads&#34;&gt;Flexible number of threads&lt;/h2&gt;
-&lt;p&gt;These is a question that: &lt;em&gt;If we apply the above two methods and still have a full queue, how will we handle it?&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;We cannot use method 1 because there cannot be a queue that is too long. We cannot use method 2 because when the number of requests decreases, the number of requests will be redundant and cost the operation.&lt;/p&gt;
-&lt;p&gt;So that, the better method is using flexible threads. This means that when the number of requests is large enough and close to the threshold, we will allocate more threads to help the system process faster to match that time. When the rush hour is over, the number of requests decreases, we can recall the flexible threads to reserve for other processes.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;We can easily see this method in real life. Coffee shops are usually more staffed during busy times and less staffed the rest of the time.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;advantage-2&#34;&gt;Advantage&lt;/h3&gt;
-&lt;p&gt;Optimize costs and still serve a large number of requests at peak times.&lt;/p&gt;
-&lt;h3 id=&#34;disadvantage-2&#34;&gt;Disadvantage&lt;/h3&gt;
-&lt;p&gt;Must be set up so that the machines can be flexible when needed.&lt;/p&gt;
-&lt;h2 id=&#34;divide-and-conquer&#34;&gt;Divide and conquer&lt;/h2&gt;
-&lt;p&gt;When building a large system, we can divide the system into a number of subsystems that specialize in certain tasks. When a subsystem is specialized, we can use techniques to make that subsystem run better and faster.&lt;/p&gt;
-&lt;p&gt;Moreover, when we divide the large system into subsystems, we will work better in the latter case. If there are requests that can be handled without including the jobs of all subsystems, those requests will not have to wait too long to be processed and responded to.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;A real-life example is when you go to cinemas like CGV, you will find that there are separate ticket stalls and popcorn stalls. Then, customers who only want to buy popcorn will not have to wait for the system to serve those who buy tickets in advance.&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://TrucJ.github.io/p/large-scale-system-design/cgv.png&#34;
-	width=&#34;980&#34;
-	height=&#34;415&#34;
-	srcset=&#34;https://TrucJ.github.io/p/large-scale-system-design/cgv_huf24690a920d9a2dcb5195a497769f823_679852_480x0_resize_box_2.png 480w, https://TrucJ.github.io/p/large-scale-system-design/cgv_huf24690a920d9a2dcb5195a497769f823_679852_1024x0_resize_box_2.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;Popconrn stalls and ticket stalls in CGV&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;236&#34;
-		data-flex-basis=&#34;566px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;h3 id=&#34;advantages&#34;&gt;Advantages&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Process specialization.&lt;/li&gt;
-&lt;li&gt;Processing speed is faster than method 2.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;disadvantages&#34;&gt;Disadvantages&lt;/h3&gt;
-&lt;p&gt;Although there are many advantages, this method should only be applied to large projects for the following reasons:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Subprocesses need cost to implement. Because to specialize, we need to rebuild so that subprocess works best.
-When a request includes multiple subprocesses, we need to manage the order in which the subprocesses are called.&lt;/li&gt;
-&lt;li&gt;Difficult to trace the processing of a request.&lt;/li&gt;
-&lt;li&gt;It is not always possible to split into subprocesses. Usually only large projects can be divided into specialized subprocesses.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;conclude&#34;&gt;Conclude&lt;/h1&gt;
-&lt;p&gt;Designing a large-scale system is a common problem for many companies. There are many methods to perform, but no method is the best, is perfect. Depending on the case, we will have specific methods for that context.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Thank you everyone for reading my first blog, goodbye and see you on the next blog.&lt;/em&gt;&lt;/p&gt;
-</description>
-        </item>
-        
-    </channel>
+  <channel>
+    <title>Posts on TrucJ</title>
+    <link>https://TrucJ.github.io/post/</link>
+    <description>Recent content in Posts on TrucJ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 16 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://TrucJ.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Large-scale System Design</title>
+      <link>https://TrucJ.github.io/p/large-scale-system-design/</link>
+      <pubDate>Mon, 16 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://TrucJ.github.io/p/large-scale-system-design/</guid>
+      <description>Since I am a newbie and do not have too much expertise, I will share in the easiest way to understand this topic.
+Instead of talking about how to build a particular system, I am going to give a general introduction to how to build a large scale system.
+General methods Handling a large number of requests in one system is like serving multiple customers in a store or an airport.</description>
+    </item>
+    
+    <item>
+      <title>Large-scale System Design</title>
+      <link>https://TrucJ.github.io/p/large-scale-system-design/</link>
+      <pubDate>Mon, 16 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://TrucJ.github.io/p/large-scale-system-design/</guid>
+      <description>Since I am a newbie and do not have too much expertise, I will share in the easiest way to understand this topic.
+Instead of talking about how to build a particular system, I am going to give a general introduction to how to build a large scale system.
+General methods Handling a large number of requests in one system is like serving multiple customers in a store or an airport.</description>
+    </item>
+    
+  </channel>
 </rss>
