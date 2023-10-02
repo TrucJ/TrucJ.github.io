@@ -13,5 +13,5 @@ cd ..
 ```
 - Init avatar:
 ```bash
-cp img/avatar.jpg themes/hugo-theme-stack/assets/img/avatar.jpg
+bash assets/init.sh
 ```
