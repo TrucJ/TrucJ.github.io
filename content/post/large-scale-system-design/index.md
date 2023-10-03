@@ -1,18 +1,16 @@
-+++
-author = "TrucJ"
-title = "Large-scale System Design"
-date = "2022-05-16"
-description = "An overview of how to design a system that serves a large user base for beginners."
-tags = [
-    "system design",
-    "large-scale system",
-    "beginner",
-]
-categories = [
-    "System",
-]
-image = "banner.png"
-+++
+---
+author: TrucJ
+title: Large-scale System Design
+date: '2022-05-16'
+description: An overview of how to design a system that serves a large user base for beginners.
+tags:
+  - system design
+  - large-scale system
+  - beginner
+categories:
+  - System
+image: banner.png
+---
 
 
 Since I am a newbie and do not have too much expertise, I will share in the easiest way to understand this topic.

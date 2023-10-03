@@ -1,6 +1,6 @@
 ---
 author: TrucJ
-title: Golang tutorial
+title: Tổng quan về Golang
 date: '2023-10-02'
 description: Một bài viết tổng quan về ngôn ngữ lập trình Golang.
 tags:
@@ -70,5 +70,3 @@ var height float32 = 1.75
 var nation string = "Vietnam"
 var isMale bool = true
 ```
-
-
