@@ -122,7 +122,7 @@ func main() {
 ### Biểu thức và toán tử
 Hầu hết các biểu thức toán tử trong Go đều giống như C++
 #### Toán tử số học
-
+Các toán tử `+ - * / %` giống C++ hoàn toàn
 
 
 
